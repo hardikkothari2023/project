@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediStore - Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <!-- Login Section -->
+  <section class="login-section">
+    <div class="login-container">
+      <h1>Welcome to MediStore</h1>
+      <form id="login-form">
+        <label for="mobile">Mobile Number</label>
+        <input type="text" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>We Are Here To Secure Your Health</p>
+    </div>
+  </footer>
+
+  <script>
+    // Dummy credentials for login
+    
+    const predefinedPassword = "medicapp@123";
+
+    // Function to handle login
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      
+      const mobileNumber = document.getElementById('mobile').value; // Corrected here
+      const password = document.getElementById('password').value;
+      
+      if (password === predefinedPassword) {
+        // Redirect to the main page
+        window.location.href = "main.html";
+      } else {
+        alert("Invalid login credentials. Please try again.");
+      }
+    });
+  </script>
+</body>
+</html>

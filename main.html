@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediStore - Online Pharmacy</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">MediStore</div>
+      <div class="search-bar">
+        <input 
+          type="text" 
+          id="search" 
+          placeholder="Search for medicines..." 
+          oninput="searchMedicine()"
+        />
+        <button onclick="searchMedicine()">🔍</button>
+      </div>
+      <div class="cart-icon">
+        <button id="view-cart" onclick="toggleCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content container">
+      <h1>Welcome to MediStore</h1>
+      <p>Your one-stop destination for trusted healthcare products.</p>
+      <button class="shop-now" onclick="scrollToProducts()">Shop Medicines</button>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products-section" id="product-list">
+    <h2>Explore Our Medicines</h2>
+    <div class="product-container" id="products">
+      <!-- Products will be dynamically inserted here -->
+    </div>
+  </section>
+
+  <!-- Shopping Cart -->
+  <div class="cart-overlay hidden" id="cart">
+    <div class="cart-content">
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <div class="cart-footer">
+        <p>Total: ₹<span id="cart-total">0</span></p>
+        <button onclick="checkout()">Checkout</button>
+        <button onclick="toggleCart()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 MediStore. All rights reserved by Aniket and Hardik of Poornima University.</p>
+    </div>
+  </footer>
+</body>
+</html>
